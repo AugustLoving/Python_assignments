@@ -44,14 +44,14 @@
 #     print(f"{specific_student} är inte med i båda kurserna")
 
 # #Upg5
-# # products = {"mjölk": "25:-", "bröd": "30:-", "kakor": "20:-"}
+# products = {"mjölk": "25:-", "bröd": "30:-", "kakor": "20:-"}
 
-# # search = input("Sök produkt: ")
+# search = input("Sök produkt: ")
 
-# # if search in products:
-# #     print(products.pop(search))
-# # else:
-# #     print("Produkten finns inte i lager")
+# if search in products:
+#     print(products.pop(search))
+# else:
+#     print("Produkten finns inte i lager")
 
 # #Upg6
 # # import random
@@ -180,17 +180,67 @@
 
 # # colour()
 
-class Rektangel:
-    def __init__(self, längd, bredd):
-        self.längd = längd
-        self.bredd = bredd
-    def area(self, längd, bredd):
-        self.längd = längd
-        self.bredd = bredd
-        arean = längd * bredd
-        return arean
+# Mer Uppgifter
 
+#Upg1
 
-min_rektangel = Rektangel(100, 50)
+# valutakurser = {"USD": 0.11, "EUR": 0.095, "GBP": 0.085}
 
-print(min_rektangel.area)
+# amount_sek = float(input("Ange ditt belopp i SEK: "))
+
+# for valuta, kurs in valutakurser.items():
+#     konverterat_belopp = amount_sek * kurs
+#     print(f"{amount_sek} SEK är lika med {konverterat_belopp:.2f} {valuta}")
+
+#Upg2
+# def person(ålder, sysselsättning):
+#     if ålder <= 19:
+#         if sysselsättning == "student":
+#             print("Ungdom och student")
+#         else:
+#             print(f"Ungdom och {sysselsättning}")
+#     elif 20 <= ålder <= 64:
+#         if sysselsättning == "student":
+#             print("Vuxen och student")
+#         else:
+#          print(f"Vuxen och {sysselsättning}")
+#     else:
+#         if sysselsättning == "pensionär":
+#             print("Pensionär")
+#         else:
+#             print(f"Pensionär och {sysselsättning}")
+
+# person(18, "Student")
+# person(67, "pensionär")
+# person(20, "Customer data developer")
+# person(17, "Ica medarbetare")
+
+#Upg3
+# filmer_och_genrer = {}
+
+# antal_filmer = int(input("Hur många filmer vill du lägga till?: "))
+
+# for _ in range(antal_filmer):
+#     titel = input("Ange filmens titel: ")
+#     genre = input(f"Ange genren för filmen '{titel}: ")
+#     filmer_och_genrer[titel] = genre
+
+# favoritgenre = input("Vad är din favoritgenre?: ")
+
+# for titel, genre in filmer_och_genrer.items():
+#     print(f"Film: {titel}, Genre: {genre}")
+#     if genre.lower() == favoritgenre.lower():
+#         print("Den här filmen är i din favoritgenre")
+
+#Upg4
+
+#Upg5
+produkt_pris_lager = {"mjölk": (15, "i lager"), "bröd": (20, "ej i lager")}
+
+search = input("Sök produkt: ")
+
+if search in produkt_pris_lager:
+    pris, hehe = produkt_pris_lager[search]
+    print(pris)
+else:
+    print("Produkten finns ej i lager")
