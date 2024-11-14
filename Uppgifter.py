@@ -235,12 +235,14 @@
 #Upg4
 
 #Upg5
-produkt_pris_lager = {"mjölk": (15, "i lager"), "bröd": (20, "ej i lager")}
+# produkt_pris_lager = {"mjölk": (15, "i lager"), "bröd": (20, "ej i lager")}
 
-search = input("Sök produkt: ")
+# search = input("Sök produkt: ")
 
-if search in produkt_pris_lager:
-    pris, hehe = produkt_pris_lager[search]
-    print(pris)
-else:
-    print("Produkten finns ej i lager")
+# if search in produkt_pris_lager:
+#     pris, hehe = produkt_pris_lager[search]
+#     print(pris)
+# else:
+#     print("Produkten finns ej i lager")
+
+
