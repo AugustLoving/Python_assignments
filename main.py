@@ -149,3 +149,42 @@
 # sekvens[::step]`**: Hela sekvensen med steg `step`.
 # sekvens[::-1]`**: Hela sekvensen omvänd.
 
+#UPPGIFTER 5
+
+#Upg 1
+# djur = ["hund", "katt", "kanin", "fågel", "orm", "fisk"]
+
+# first_djur = djur[0:3]
+# last_djur = djur[3:7]
+# mellan_djur = djur[1:5]
+
+# print(first_djur)
+# print(last_djur)
+# print(mellan_djur)
+
+# #Upg2
+# nummer = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+# varannan_nummer = nummer[::2]
+# vartredje_nummer = nummer[::3]
+
+# print(varannan_nummer)
+# print(vartredje_nummer)
+
+#Upg 3
+# färger = ["röd", "grön", "blå", "gul", "svart"]
+# print(färger[::-1])
+# py = "python"
+# reverse_py = py[::-1]
+# print(reverse_py)
+
+#Upg4
+# veckodagar = ["måndag", "tisdag", "onsdag", "torsdag", "fredag", "lördag", "söndag"]
+# tre_sista_dagarna = veckodagar[-3:]
+# print(tre_sista_dagarna)
+
+#Upg5
+meddelande = "Välkommen till kursen"
+
+print(meddelande[:9])
+print(meddelande[-6:])
+

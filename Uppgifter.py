@@ -29,19 +29,19 @@
 #         print(movie)
     
 #Upg4
-# math_students = {"Anna", "Bertil", "Cecilia", "David", "Emma"}
+math_students = {"Anna", "Bertil", "Cecilia", "David", "Emma"}
 
-# science_students = {"Cecilia", "David", "Fredrik", "Greta", "Hanna"}
+science_students = {"Cecilia", "David", "Fredrik", "Greta", "Hanna"}
 
-# both_courses = math_students & science_students
-# print(f"Elever som är med i båda kurserna: {both_courses}")
+both_courses = math_students & science_students
+print(f"Elever som är med i båda kurserna: {both_courses}")
 
-# specific_student = input("Studentnamn: ")
+specific_student = input("Studentnamn: ")
 
-# if specific_student in both_courses:
-#     print(f"{specific_student} är med i båda kurserna")
-# else:
-#     print(f"{specific_student} är inte med i båda kurserna")
+if specific_student in both_courses:
+    print(f"{specific_student} är med i båda kurserna")
+else:
+    print(f"{specific_student} är inte med i båda kurserna")
 
 #Upg5
 # products = {"mjölk": "25:-", "bröd": "30:-", "kakor": "20:-"}
@@ -71,16 +71,16 @@
 #         print(ord_i_listan)
 
 #Upg8
-# numbers = [10, -5, 20, -15, 30, -25, 50, -40, 60, -35]
+numbers = [10, -5, 20, -15, 30, -25, 50, -40, 60, -35]
 
-# def is_negative(n):
-#     return n < 0
+def is_negative(n):
+    return n < 0
 
-# negative_numbers = list(filter(is_negative, numbers))
+negative_numbers = list(filter(is_negative, numbers))
 
-# print(list(negative_numbers))
+print(negative_numbers)
 
-# print(len(negative_numbers))
+print(len(negative_numbers))
 
 #Upg9
 # bok = ("Kingen", "August Löving", 1999)
@@ -174,8 +174,8 @@
 # print(temp(dagens_temp))
 
 #Upg 10
-def colour():
-   färg = input("Färg: ")
-   print(f"Din favorit färg är: {färg}")
+# def colour():
+#    färg = input("Färg: ")
+#    print(f"Din favorit färg är: {färg}")
 
-colour()
+# colour()
