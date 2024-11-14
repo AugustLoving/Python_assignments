@@ -1,10 +1,10 @@
 # #for-loop
 # # for element in sekvens:
 #     # Kod att köra för varje element
-names = ["ALice", "Bob", "Charlie"]
-# Iterera genom varje namn i listan
-for name in names:
-    print(name)
+# names = ["ALice", "Bob", "Charlie"]
+# # Iterera genom varje namn i listan
+# for name in names:
+#     print(name)
 # # resultat:
 # # Alice
 # # Bob
