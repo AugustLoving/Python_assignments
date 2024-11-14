@@ -174,8 +174,8 @@
 # print(temp(dagens_temp))
 
 #Upg 10
-# def colour():
-#    färg = input("Färg: ")
-#    print(f"Din favorit färg är: {färg}")
+def colour():
+   färg = input("Färg: ")
+   print(f"Din favorit färg är: {färg}")
 
-# colour()
+colour()
