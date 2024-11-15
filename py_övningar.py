@@ -48,6 +48,12 @@
 
 # 3. Lista ord i bokstavsordning
 
-mening = input("Skriv en mening")
+mening = input("Skriv en mening: ").lower()
+
+delad_mening = mening.split()
+
+delad_mening.sort()
+
+print(delad_mening)
 
 
