@@ -58,17 +58,35 @@
 
 # 4. Enkla statistikberäkningar
 
-input_list = input("Skriva 5 tal: ")
+# input_list = input("Skriva dina tal: ")
 
-num_list = input_list.split()
+# num_list = input_list.split()
 
-num_list = [float(num) for num in num_list]
+# num_list = [float(num) for num in num_list]
 
-max_num = max(num_list)
-min_num = min(num_list)
-sum_num = sum(num_list)
+# max_num = max(num_list)
+# min_num = min(num_list)
+# sum_num = sum(num_list)
 
-print(num_list)
-print(f"Högsta siffran är: {max_num}")
-print(f"Lägsta siffran är: {min_num}")
-print(f"summan av talen är: {sum_num}")
+# print(num_list)
+# print(f"Högsta talet är: {max_num}")
+# print(f"Lägsta talet är: {min_num}")
+# print(f"summan av talen är: {sum_num}")
+
+# 5. Liten frågesport
+fråga_1 = "Vad är huvudstaden i Sverige?"
+fråga_2 = "Vad är 5 + 3?"
+fråga_3 = "Vilket är det största havet på jorden?"
+
+
+svars_altenativ_1 = ["Stockholm", "Göteborg", "Västerås"]
+svars_altenativ_2 = ["6", "7", "8"]
+svars_altenativ_3 = ["Atlanten", "Indiska oceanen", "Stilla havet"]
+
+
+rätt_svar = {fråga_1: "Stockholm", fråga_2: "8", fråga_3: "Stilla havet"}
+
+poäng = 0
+
+def ställ_svar(fråga, altenativ, rätt_svar):
+    print("f\n{fråga}")
