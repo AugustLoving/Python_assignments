@@ -48,12 +48,27 @@
 
 # 3. Lista ord i bokstavsordning
 
-mening = input("Skriv en mening: ").lower()
+# mening = input("Skriv en mening: ").lower()
 
-delad_mening = mening.split()
+# delad_mening = mening.split()
 
-delad_mening.sort()
+# delad_mening.sort()
 
-print(delad_mening)
+# print(delad_mening)
 
+# 4. Enkla statistikberäkningar
 
+input_list = input("Skriva 5 tal: ")
+
+num_list = input_list.split()
+
+num_list = [float(num) for num in num_list]
+
+max_num = max(num_list)
+min_num = min(num_list)
+sum_num = sum(num_list)
+
+print(num_list)
+print(f"Högsta siffran är: {max_num}")
+print(f"Lägsta siffran är: {min_num}")
+print(f"summan av talen är: {sum_num}")
