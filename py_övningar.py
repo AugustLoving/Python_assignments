@@ -74,19 +74,36 @@
 # print(f"summan av talen är: {sum_num}")
 
 # 5. Liten frågesport
-fråga_1 = "Vad är huvudstaden i Sverige?"
-fråga_2 = "Vad är 5 + 3?"
-fråga_3 = "Vilket är det största havet på jorden?"
+# fråga_1 = "Vad är huvudstaden i Sverige?"
+# fråga_2 = "Vad är 5 + 3?"
+# fråga_3 = "Vilket är det största havet på jorden?"
 
 
-svars_altenativ_1 = ["Stockholm", "Göteborg", "Västerås"]
-svars_altenativ_2 = ["6", "7", "8"]
-svars_altenativ_3 = ["Atlanten", "Indiska oceanen", "Stilla havet"]
+# svars_altenativ_1 = ["Stockholm", "Göteborg", "Västerås"]
+# svars_altenativ_2 = ["6", "7", "8"]
+# svars_altenativ_3 = ["Atlanten", "Indiska oceanen", "Stilla havet"]
 
 
-rätt_svar = {fråga_1: "Stockholm", fråga_2: "8", fråga_3: "Stilla havet"}
+# rätt_svar = {fråga_1: "Stockholm", fråga_2: "8", fråga_3: "Stilla havet"}
 
-poäng = 0
+# poäng = 0
 
-def ställ_svar(fråga, altenativ, rätt_svar):
-    print("f\n{fråga}")
+# def ställ_svar(fråga, altenativ, rätt_svar):
+#     print("f\n{fråga}")
+
+# Temeratur omvandlare
+
+# def till_celcius(temp, omvandlingstyp):
+#     if omvandlingstyp == "c":
+#         celsius = (temp - 32) * 5/9
+#         print(f"{temp} fahrenheit är {celsius:.2f} grader celcius")
+#     elif omvandlingstyp == "f":
+#         fahrenheit = (temp * 9/5) + 32
+#         print(f"{temp} celcis är {fahrenheit:.2f} grader fahrenheit")
+#     else:
+#         print("Ogilitigt val, välj C eller F")
+
+# omvandlingstyp = input("Vilken typ vill du omvandla till (C/F): ").lower()
+# temp = float(input("Temperatur: "))
+
+# till_celcius(temp, omvandlingstyp)
