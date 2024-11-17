@@ -130,18 +130,21 @@
 # längst_ord(mening)
 
 # 3. beräkna area och omkrets av en cirkel
-import math
+# import math
 
-radie = float(input("Ange radie: "))
+# radie = float(input("Ange radie: "))
 
-def ber_area(radie):
-    area = math.pow(radie, 2) * math.pi
-    print(f"Arean är: {area:.2f}")
+# def ber_area(radie):
+#     area = math.pow(radie, 2) * math.pi
+#     print(f"Arean är: {area:.2f}")
 
-def ber_omkrets(radie):
-    omkrets = 2 * radie * math.pi
-    print(f"Omkretsen är: {omkrets:.2f}")
+# def ber_omkrets(radie):
+#     omkrets = 2 * radie * math.pi
+#     print(f"Omkretsen är: {omkrets:.2f}")
 
 
-ber_area(radie)
-ber_omkrets(radie)
+# ber_area(radie)
+# ber_omkrets(radie)
+
+mitt_tal = int(input("Ange ett tal: "))
+print(type(mitt_tal))
