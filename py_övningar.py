@@ -109,22 +109,39 @@
 # till_celcius(temp, omvandlingstyp)
 
 
-
-def antal_ord(mening):
-    result = mening.split()
-    print(f"Din mening innehåller {len(result)} ord.")
+#2. enkla textanalyser
+# def antal_ord(mening):
+#     result = mening.split()
+#     print(f"Din mening innehåller {len(result)} ord.")
     
 
-def antal_boks(mening):
-    count = len([char for char in mening if char.isalpha()])
-    print(f"din mening innehåller {count} bokstäver.")
+# def antal_boks(mening):
+#     count = len([char for char in mening if char.isalpha()])
+#     print(f"din mening innehåller {count} bokstäver.")
 
-def längst_ord(mening):
-    longest = max(mening.split(), key=len)
-    print(f"Det längsta ordet är: {longest}")
+# def längst_ord(mening):
+#     longest = max(mening.split(), key=len)
+#     print(f"Det längsta ordet är: {longest}")
 
-mening = input("Skriv en mening: ")
+# mening = input("Skriv en mening: ")
 
-antal_ord(mening)
-antal_boks(mening)
-längst_ord(mening)
+# antal_ord(mening)
+# antal_boks(mening)
+# längst_ord(mening)
+
+# 3. beräkna area och omkrets av en cirkel
+import math
+
+radie = float(input("Ange radie: "))
+
+def ber_area(radie):
+    area = math.pow(radie, 2) * math.pi
+    print(f"Arean är: {area:.2f}")
+
+def ber_omkrets(radie):
+    omkrets = 2 * radie * math.pi
+    print(f"Omkretsen är: {omkrets:.2f}")
+
+
+ber_area(radie)
+ber_omkrets(radie)
