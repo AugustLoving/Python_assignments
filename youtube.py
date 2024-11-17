@@ -152,8 +152,54 @@
 #     main()
 
 
-num1 = float(input("första siffran: "))
-num2 = float(input("andra siffran: "))
-result = num1 + num2
+# class Student:
 
-print(result)
+#     class_year = 2026
+#     num_students = 0
+
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#         Student.num_students += 1
+
+
+
+# student1 = Student("Agge", 25)
+# student2 = Student("Abbe", 26)
+# student3 = Student("bläkvar", 40)
+# student4 = Student("smampob", 55)
+
+# print(f"My graduating class of {Student.class_year} has {Student.num_students} students")
+# print(student1.name)
+# print(student2.name)
+# print(student3.name)
+# print(student4.name)
+
+class Animal:
+    def __init__(self, name):
+        self.name = name
+        self.is_alive = True
+
+    def eat(self):
+        print(f"{self.name} is eating")
+    
+    def sleep(self):
+        print(f"{self.name} is sleeping")
+
+class Dog(Animal):
+    def speak(self):
+        print(f"WOOF!")
+
+class Cat(Animal):
+    def speak(self):
+        print("MEOW!")
+
+class Mouse(Animal):
+    def speak(self):
+        print("SQUEEK!")
+
+dog = Dog("Scooby")
+cat = Cat("Garfield")
+mouse = Mouse("Mickey")
+
+mouse.speak()

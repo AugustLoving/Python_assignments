@@ -134,19 +134,19 @@
 # print(result)
 
 
-usd_rate = 0.091 
-eur_rate = 0.086
+# usd_rate = 0.091 
+# eur_rate = 0.086
 
-convert_to = input("Vad vill du konvertera SEK till?(dollar / euro): ").lower()
-amount_sek = float(input("Ange belopp i sek: "))
+# convert_to = input("Vad vill du konvertera SEK till?(dollar / euro): ").lower()
+# amount_sek = float(input("Ange belopp i sek: "))
 
-if convert_to == "dollar":
-    usd_sek = amount_sek * usd_rate
-    print(f"{amount_sek}KR är ${usd_sek}")
-elif convert_to == "euro":
-    eur_sek = amount_sek * eur_rate
-    print(f"{amount_sek}KR är €{eur_sek}")
-else:
-    print("vänligen ange 'dollar' eller 'euro'")
+# if convert_to == "dollar":
+#     usd_sek = amount_sek * usd_rate
+#     print(f"{amount_sek}KR är ${usd_sek}")
+# elif convert_to == "euro":
+#     eur_sek = amount_sek * eur_rate
+#     print(f"{amount_sek}KR är €{eur_sek}")
+# else:
+#     print("vänligen ange 'dollar' eller 'euro'")
 
 
