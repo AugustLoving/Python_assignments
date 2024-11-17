@@ -107,3 +107,24 @@
 # temp = float(input("Temperatur: "))
 
 # till_celcius(temp, omvandlingstyp)
+
+
+
+def antal_ord(mening):
+    result = mening.split()
+    print(f"Din mening innehåller {len(result)} ord.")
+    
+
+def antal_boks(mening):
+    count = len([char for char in mening if char.isalpha()])
+    print(f"din mening innehåller {count} bokstäver.")
+
+def längst_ord(mening):
+    longest = max(mening.split(), key=len)
+    print(f"Det längsta ordet är: {longest}")
+
+mening = input("Skriv en mening: ")
+
+antal_ord(mening)
+antal_boks(mening)
+längst_ord(mening)
