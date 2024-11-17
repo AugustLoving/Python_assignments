@@ -85,5 +85,50 @@
 # print(my_dict)
 # print(my_dict.pop("age"))
 
-for i in range(1,5):  # range(1, 5) ger 1, 2, 3, 4
-    print(i)
+# my_list = [1, 2, 3, 4, 5]
+
+# total = 0
+
+# for siffror in my_list:
+#     total += siffror
+
+# print(total)
+
+# my_list = [3, 12, 7, 21, 5]
+# störst = my_list[0]
+
+# for max_num in my_list:
+#     if max_num > störst:
+#         störst = max_num
+
+# print(störst)
+
+# counter = 0
+
+# while counter < 10:
+#     counter += 1
+#     print(counter)
+
+# my_list = [5, 12, 9, 15, 8]
+
+# total = 0
+
+# index = 0
+
+# while index < len(my_list):
+#     if my_list[index] > 10:
+#         total += my_list[index]
+#     index += 1
+
+# print(total)
+
+my_list = [2, 3, 4]
+
+result = 1
+
+
+for numbers in my_list:
+    result *= numbers
+    
+
+print(result)
