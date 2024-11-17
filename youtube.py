@@ -151,3 +151,9 @@
 # if __name__ == "__main__":
 #     main()
 
+
+num1 = float(input("första siffran: "))
+num2 = float(input("andra siffran: "))
+result = num1 + num2
+
+print(result)
