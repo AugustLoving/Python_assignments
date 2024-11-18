@@ -149,4 +149,22 @@
 # else:
 #     print("vänligen ange 'dollar' eller 'euro'")
 
+class Car:
+    def __init__(self, brand, modell, year):
+        self.brand = brand
+        self.modell = modell
+        self.year = year
 
+    def is_starting(self):
+        print(f"{self.modell} is starting")
+    
+    def is_stopped(self):
+        print(f"{self.modell} is stopped")
+        
+
+
+car1 = Car("VW", "Passat", 2016)
+car2 = Car("Porshe", "cayenne", 2022)
+
+car1.is_starting()
+car2.is_stopped()
