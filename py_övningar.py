@@ -29,10 +29,12 @@
 # import random
 
 # random_num = random.randint(1, 100)
+# försök = 0
 
 # while True:
 #     try:
 #         gissning = int(input("Gissa siffran 1-100: "))
+#         försök += 1
 #     except ValueError:
 #         print("Ogilitigt, ange en siffra!")
 
@@ -43,7 +45,7 @@
 #     elif gissning > random_num:
 #         print("För högt")
 #     else:
-#         print("Du gissade rätt, grattis!")
+#         print(f"Du gissade rätt på {försök} försök, grattis!")
 #         break
 
 # 3. Lista ord i bokstavsordning
@@ -51,18 +53,20 @@
 # mening = input("Skriv en mening: ").lower()
 
 # delad_mening = mening.split()
-
 # delad_mening.sort()
+# sorterad_mening = " ".join(delad_mening)
 
-# print(delad_mening)
+# print(sorterad_mening)
 
 # 4. Enkla statistikberäkningar
 
-# input_list = input("Skriva dina tal: ")
+# input_list = input("Skriva dina tal, separera med mellanslag: ")
+# print(input_list)
 
 # num_list = input_list.split()
 
 # num_list = [float(num) for num in num_list]
+
 
 # max_num = max(num_list)
 # min_num = min(num_list)
@@ -91,7 +95,8 @@
 # def ställ_svar(fråga, altenativ, rätt_svar):
 #     print("f\n{fråga}")
 
-# Temeratur omvandlare
+# Funktion uppgifter
+# 1. Temeratur omvandlare
 
 # def till_celcius(temp, omvandlingstyp):
 #     if omvandlingstyp == "c":
@@ -146,5 +151,67 @@
 # ber_area(radie)
 # ber_omkrets(radie)
 
-mitt_tal = int(input("Ange ett tal: "))
-print(type(mitt_tal))
+# 4. Multiplikationstabell
+
+
+# def multiplikationstabell(tal, upptill):
+#     for i in range(1, upptill + 1):
+#         print(f"{tal} X {i} = {tal * i}")
+
+# tal = int(input("Ange ett heltal för multiplikationstabellen: "))
+# upptill = int(input("Hur långt ska tabellen gå: "))
+    
+
+
+# multiplikationstabell(tal, upptill)
+
+# 5. Palindrome Checker
+# def check_palindrome(text):
+
+#     text = text.replace(" ", "").lower()
+
+#     reverse_text = text[::-1]
+
+#     if reverse_text == text:
+#         print("Palindrome!")
+#     else:
+#         print("Inte Palindrome")
+    
+# text = input("Ange ett ord eller mening(utan .): ")
+
+# check_palindrome(text)
+import random
+
+poäng = 100
+kast = 0
+
+def kasta_tärning():
+    return  random.randint(1, 6)
+
+while poäng > 50 and poäng < 150:
+    result = kasta_tärning()
+    kast += 1
+
+    print(f"Tärningens resultat: {result}")
+
+    if result == 5 or result == 6:
+        poäng += 10
+        print("Du fick 10 poäng!")
+        print(f"Total poäng: {poäng}")
+    else:
+        poäng -= 10
+        print(f"Du förlorade 10 poäng!")
+        print(f"Total poäng: {poäng}")
+
+if poäng <= 50:
+    print(f"Du förlorade! Antal kast: {kast}")
+elif poäng >= 150:
+    print(f"Du vann! Antal kast: {kast}")
+
+
+    
+
+
+
+
+
