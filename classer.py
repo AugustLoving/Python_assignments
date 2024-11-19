@@ -13,15 +13,15 @@
 # print(min_rektangel.area())
 # print(min_rektangel2.area())
 
-class Bok:
-    def __init__ (self, titel, författare, år):
-        self.titel = titel
-        self.författare = författare
-        self.år = år
-    def beskrivning(self,):
-        print(f"Titel: {self.titel}, Författare: {self.författare} År: {self.år}")
+# class Bok:
+#     def __init__ (self, titel, författare, år):
+#         self.titel = titel
+#         self.författare = författare
+#         self.år = år
+#     def beskrivning(self,):
+#         print(f"Titel: {self.titel}, Författare: {self.författare} År: {self.år}")
         
     
 
-min_bok = Bok("Kingen", "August Löving", 1999)
-min_bok.beskrivning()
+# min_bok = Bok("Kingen", "August Löving", 1999)
+# min_bok.beskrivning()
