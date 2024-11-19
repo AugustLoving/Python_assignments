@@ -175,31 +175,32 @@
 # print(student3.name)
 # print(student4.name)
 
-class Animal:
-    def __init__(self, name):
-        self.name = name
-        self.is_alive = True
+# class Animal:
+#     def __init__(self, name):
+#         self.name = name
+#         self.is_alive = True
 
-    def eat(self):
-        print(f"{self.name} is eating")
+#     def eat(self):
+#         print(f"{self.name} is eating")
     
-    def sleep(self):
-        print(f"{self.name} is sleeping")
+#     def sleep(self):
+#         print(f"{self.name} is sleeping")
 
-class Dog(Animal):
-    def speak(self):
-        print(f"WOOF!")
+# class Dog(Animal):
+#     def speak(self):
+#         print(f"WOOF!")
 
-class Cat(Animal):
-    def speak(self):
-        print("MEOW!")
+# class Cat(Animal):
+#     def speak(self):
+#         print("MEOW!")
 
-class Mouse(Animal):
-    def speak(self):
-        print("SQUEEK!")
+# class Mouse(Animal):
+#     def speak(self):
+#         print("SQUEEK!")
 
-dog = Dog("Scooby")
-cat = Cat("Garfield")
-mouse = Mouse("Mickey")
+# dog = Dog("Scooby")
+# cat = Cat("Garfield")
+# mouse = Mouse("Mickey")
 
-mouse.speak()
+# mouse.speak()
+
