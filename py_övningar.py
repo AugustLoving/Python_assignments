@@ -201,3 +201,56 @@
 #     print(f"Du förlorade! Antal kast: {kast}")
 # elif poäng >= 150:
 #     print(f"Du vann! Antal kast: {kast}")
+
+# OOP
+# 1. kunddatabas
+
+class Customer:
+    def __init__(self, namn, epost, telefon, adress):
+        self.namn = namn
+        self.epost = epost
+        self.telefon = telefon
+        self.adress = adress
+    
+    def __str__(self):
+        return f"name: {self.namn} epost: {self.epost} telefon: {self.telefon} adress: {self.adress}"
+    
+class CustomerDatabase():
+    def __init__(self):
+        self.customers = []
+
+    def add_customer(self, customer):
+        self.customers.append(customer)
+        print(f"Kunden {customer.namn} är tillagd!")
+
+    def list_customers(self):
+        
+        if not self.customers:
+            print("No customers in the database.")
+        else:
+            print("Customer list:")
+            for customer in self.customers:
+                print(customer)
+    
+    def remove_customer(self, epost):
+        for customer in self.customers:
+            if customer.epost == epost:
+                self.customers.remove(customer)
+                print(F"kunden {customer.namn} borttagen")
+            else:
+                print(f"ingen kund med epostadressen: {epost} hittad")
+
+    def find_customer(self,namn, epost):
+        for customer in self.customers:
+            if customer.epost == epost or customer.namn == namn:
+                return customer
+            else:
+                print("ingen kund hittad")
+
+db = CustomerDatabase()
+
+db.add_customer(Customer("Agge", "Agge@gmail.com", "0700474811", "Treklövergatan 1"))
+db.add_customer(Customer("svampbob", "bobbysvamp@gmail.com", "07845694586", "bikinibotten 1"))
+
+
+db.list_customers()
