@@ -145,6 +145,3 @@
 
 # ber_area(radie)
 # ber_omkrets(radie)
-
-mitt_tal = int(input("Ange ett tal: "))
-print(type(mitt_tal))
