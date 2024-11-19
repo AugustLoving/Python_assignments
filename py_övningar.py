@@ -240,12 +240,8 @@ class CustomerDatabase():
             else:
                 print(f"ingen kund med epostadressen: {epost} hittad")
 
-    def find_customer(self,namn, epost):
-        for customer in self.customers:
-            if customer.epost == epost or customer.namn == namn:
-                return customer
-            else:
-                print("ingen kund hittad")
+    def find_customer():
+        pass
 
 db = CustomerDatabase()
 
