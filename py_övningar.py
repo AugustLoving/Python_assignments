@@ -145,3 +145,59 @@
 
 # ber_area(radie)
 # ber_omkrets(radie)
+# 4. Multiplikationstabell
+
+
+# def multiplikationstabell(tal, upptill):
+#     for i in range(1, upptill + 1):
+#         print(f"{tal} X {i} = {tal * i}")
+
+# tal = int(input("Ange ett heltal för multiplikationstabellen: "))
+# upptill = int(input("Hur långt ska tabellen gå: "))
+    
+
+
+# multiplikationstabell(tal, upptill)
+
+# 5. Palindrome Checker
+# def check_palindrome(text):
+
+#     text = text.replace(" ", "").lower()
+
+#     reverse_text = text[::-1]
+
+#     if reverse_text == text:
+#         print("Palindrome!")
+#     else:
+#         print("Inte Palindrome")
+    
+# text = input("Ange ett ord eller mening(utan .): ")
+
+# check_palindrome(text)
+# import random
+
+# poäng = 100
+# kast = 0
+
+# def kasta_tärning():
+#     return  random.randint(1, 6)
+
+# while poäng > 50 and poäng < 150:
+#     result = kasta_tärning()
+#     kast += 1
+
+#     print(f"Tärningens resultat: {result}")
+
+#     if result == 5 or result == 6:
+#         poäng += 10
+#         print("Du fick 10 poäng!")
+#         print(f"Total poäng: {poäng}")
+#     else:
+#         poäng -= 10
+#         print(f"Du förlorade 10 poäng!")
+#         print(f"Total poäng: {poäng}")
+
+# if poäng <= 50:
+#     print(f"Du förlorade! Antal kast: {kast}")
+# elif poäng >= 150:
+#     print(f"Du vann! Antal kast: {kast}")
