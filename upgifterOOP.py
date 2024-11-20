@@ -44,28 +44,70 @@
 # student3.average_grade()
     
 #upg 4
-class BankAccount():
-    def __init__(self):
-        self.__balance = 0
+# class BankAccount():
+#     def __init__(self):
+#         self.__balance = 0
 
-    def deposit(self, amount):
-        if amount > 0:
-            self.__balance += amount
+#     def deposit(self, amount):
+#         if amount > 0:
+#             self.__balance += amount
         
     
-    def withdraw(self, amount):
-        if 0 < amount <= self.__balance:
-            self.__balance -= amount
+#     def withdraw(self, amount):
+#         if 0 < amount <= self.__balance:
+#             self.__balance -= amount
         
     
-    def get_balance(self):
-        return self.__balance
+#     def get_balance(self):
+#         return self.__balance
     
 
-account = BankAccount()
-account.deposit(100)
-print(account.get_balance())
-account.withdraw(50)
-print(account.get_balance())
+# account = BankAccount()
+# account.deposit(100)
+# print(account.get_balance())
+# account.withdraw(50)
+# print(account.get_balance())
+
+# upg 5, 6
+class Animal():
+    def __init__(self, name):
+        self.name = name
+    
+    def make_sound(self):
+        return "some sound"
+    
+    def describe(self):
+        print(f"This is an animal named {self.name}")
+
+class Dog(Animal):
+    def make_sound(self):
+        return "Woof!"
+    
+    def describe(self):
+        print(f"This is dog named {self.name}!")
+
+class Cat(Animal):
+    def make_sound(self):
+        return "Meow!"
+
+    def describe(self):
+        print(f"This is cat named {self.name}!")
+
+
+def animal_sound(animals):
+    for animal in animals:
+        print(animal.make_sound())
+
+
+
+
+dog = Dog("Scooby")
+cat = Cat("Garfield")
+djur_laten = [dog, cat]
+animal_sound(djur_laten)
+dog.make_sound()
+cat.make_sound()
+dog.describe()
+cat.describe()
 
 
