@@ -149,22 +149,105 @@
 # else:
 #     print("vänligen ange 'dollar' eller 'euro'")
 
-class Car:
-    def __init__(self, brand, modell, year):
-        self.brand = brand
-        self.modell = modell
-        self.year = year
+# class Car:
+#     def __init__(self, brand, modell, year):
+#         self.brand = brand
+#         self.modell = modell
+#         self.year = year
 
-    def is_starting(self):
-        print(f"{self.modell} is starting")
+#     def is_starting(self):
+#         print(f"{self.modell} is starting")
     
-    def is_stopped(self):
-        print(f"{self.modell} is stopped")
+#     def is_stopped(self):
+#         print(f"{self.modell} is stopped")
         
 
 
-car1 = Car("VW", "Passat", 2016)
-car2 = Car("Porshe", "cayenne", 2022)
+# car1 = Car("VW", "Passat", 2016)
+# car2 = Car("Porshe", "cayenne", 2022)
 
-car1.is_starting()
-car2.is_stopped()
+# car1.is_starting()
+# car2.is_stopped()
+
+# class Student:
+#     def __init__(self, name, age, grades):
+#         self.name = name
+#         self.age = age
+#         self.grades = grades
+    
+#     def average_grade(self):
+#        return sum(self.grades) / len(self.grades)
+    
+
+
+# student1 = Student("Goofy", 25, [100, 90, 80, 70])
+# student2 = Student("Spongebob", 30, [60, 55, 98, 32])
+
+# student1_average = student1.average_grade()
+# student2_average = student2.average_grade()
+
+# print(student1.grades)
+# print(f"Gensomsnittligt betyg för {student1.name}: {student1_average}")
+# print(f"Gensomsnittligt betyg för {student2.name}: {student2_average}")
+
+# class BankAccount:
+#     def __init__(self):
+#         self.__balance = 0
+    
+# #     def deposit(self, amount):
+# #         if  amount > 0:
+# #             self.__balance += amount 
+        
+# #     def withdraw(self, amount):
+# #         if amount <= self.__balance:
+# #             self.__balance -= amount
+# #         else:
+# #             print("insufficent funds")
+
+# #     def get_balance(self):
+# #         return f"Your balance is: {self.__balance}"    
+
+# # my_account = BankAccount()
+
+# # my_account.deposit(100)
+# # print(my_account.get_balance())
+# # my_account.withdraw(500)
+# # print(my_account.get_balance())
+
+# class Animal:
+#     def __init__(self, name):
+#         self.name = name
+    
+#     def make_sound(self):
+#         return "some sound"
+    
+    
+# class Dog(Animal):
+#     def make_sound(self):
+#         return "Woof"
+
+#     def describe(self):
+#         return f"This is a dog name {self.name}"
+
+# class Cat(Animal):
+#     def make_sound(self):
+#         return "Meow"
+    
+#     def describe(self):
+#         return f"This is a cat name {self.name}"
+    
+# cat = Cat("Garfield")
+
+# print(cat.describe())
+
+# class Rectangle:
+#     def __init__(self, width, height):
+#         self.widht = width
+#         self.height = height
+    
+#     def area(self):
+#         return self.width * self.height
+    
+    # def perimeter(self):
+#         return 2* (self.width + self.width)
+
