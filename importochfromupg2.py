@@ -8,12 +8,15 @@
 # print(result2)
 
 #Upg2
-from statistik import medelvarde, median, standardavvikelse
+# from statistik import medelvarde, median, standardavvikelse
 
-tal_lista = [10, 20, 30, 40, 50]
+# tal_lista = [10, 20, 30, 40, 50]
 
-medel = medelvarde(tal_lista)
-print(medel)
+# medel = medelvarde(tal_lista)
+# print(medel)
 
-median = median(tal_lista)
-print(median)
+# median = median(tal_lista)
+# print(median)
+
+#upg3
+from geometriska import area_r, area_c
