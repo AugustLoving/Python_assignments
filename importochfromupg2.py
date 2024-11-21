@@ -8,9 +8,10 @@
 # print(result2)
 
 #Upg2
-import statistik
+from statistik import medelvarde, median, standardavvikelse
 
 tal_lista = [10, 20, 30, 40, 50]
 
-medel = statistik.medelvärde(tal_lista)
+medel = medelvarde(tal_lista)
 print(medel)
+
