@@ -20,3 +20,11 @@
 
 #upg3
 from geometriska import area_r, area_c
+
+rektangel_area = area_r(10, 5)
+print(rektangel_area)
+
+cirkel_area = area_c(10)
+print(cirkel_area)
+
+#upg 4
