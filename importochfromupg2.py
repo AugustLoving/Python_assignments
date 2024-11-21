@@ -15,3 +15,5 @@ tal_lista = [10, 20, 30, 40, 50]
 medel = medelvarde(tal_lista)
 print(medel)
 
+median = median(tal_lista)
+print(median)
