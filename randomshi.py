@@ -251,3 +251,8 @@
     # def perimeter(self):
 #         return 2* (self.width + self.width)
 
+import matematik_test
+
+result = matematik_test.addera(10, 5)
+
+print(result)
