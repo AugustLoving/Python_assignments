@@ -22,17 +22,18 @@
 # print(st_avv)
 
 #upg3
-import geometriska
+# import geometriska
 
-rektangel_area = geometriska.area_r(10, 5)
-print(rektangel_area)
+# rektangel_area = geometriska.area_r(10, 5)
+# print(rektangel_area)
 
-cirkel_area = geometriska.area_c(7)
-print(cirkel_area)
+# cirkel_area = geometriska.area_c(7)
+# print(cirkel_area)
 
 #upg 4
-# from filhantering import skriv_till_fil, las_upp_fil
+from filhantering import skriv_till_fil, las_upp_fil
 
-# filnamn = "exempel.txt"
+filnamn = "exempel.txt"
 
-
+skriv_till_fil(filnamn, "Hej! Detta är en testfil.")
+print(f"Innehållet i filen: {las_upp_fil(filnamn)}")
