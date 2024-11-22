@@ -1,4 +1,4 @@
-def skriv_till_fill(filnamn, text):
+def skriv_till_fil(filnamn, text):
     with open(filnamn, 'w') as fil:
         fil.write(text)
 
