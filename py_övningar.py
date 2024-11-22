@@ -29,10 +29,12 @@
 # import random
 
 # random_num = random.randint(1, 100)
+# försök = 0
 
 # while True:
 #     try:
 #         gissning = int(input("Gissa siffran 1-100: "))
+#         försök += 1
 #     except ValueError:
 #         print("Ogilitigt, ange en siffra!")
 
@@ -43,7 +45,7 @@
 #     elif gissning > random_num:
 #         print("För högt")
 #     else:
-#         print("Du gissade rätt, grattis!")
+#         print(f"Du gissade rätt på {försök} försök, grattis!")
 #         break
 
 # 3. Lista ord i bokstavsordning
@@ -51,18 +53,20 @@
 # mening = input("Skriv en mening: ").lower()
 
 # delad_mening = mening.split()
-
 # delad_mening.sort()
+# sorterad_mening = " ".join(delad_mening)
 
-# print(delad_mening)
+# print(sorterad_mening)
 
 # 4. Enkla statistikberäkningar
 
-# input_list = input("Skriva dina tal: ")
+# input_list = input("Skriva dina tal, separera med mellanslag: ")
+# print(input_list)
 
 # num_list = input_list.split()
 
 # num_list = [float(num) for num in num_list]
+
 
 # max_num = max(num_list)
 # min_num = min(num_list)
@@ -91,7 +95,8 @@
 # def ställ_svar(fråga, altenativ, rätt_svar):
 #     print("f\n{fråga}")
 
-# Temeratur omvandlare
+# Funktion uppgifter
+# 1. Temeratur omvandlare
 
 # def till_celcius(temp, omvandlingstyp):
 #     if omvandlingstyp == "c":
@@ -145,6 +150,7 @@
 
 # ber_area(radie)
 # ber_omkrets(radie)
+
 # 4. Multiplikationstabell
 
 
@@ -202,51 +208,5 @@
 # elif poäng >= 150:
 #     print(f"Du vann! Antal kast: {kast}")
 
-# OOP
-# 1. kunddatabas
-
-class Customer:
-    def __init__(self, namn, epost, telefon, adress):
-        self.namn = namn
-        self.epost = epost
-        self.telefon = telefon
-        self.adress = adress
-    
-    def __str__(self):
-        return f"name: {self.namn} epost: {self.epost} telefon: {self.telefon} adress: {self.adress}"
-    
-class CustomerDatabase():
-    def __init__(self):
-        self.customers = []
-
-    def add_customer(self, customer):
-        self.customers.append(customer)
-        print(f"Kunden {customer.namn} är tillagd!")
-
-    def list_customers(self):
-        
-        if not self.customers:
-            print("No customers in the database.")
-        else:
-            print("Customer list:")
-            for customer in self.customers:
-                print(customer)
-    
-    def remove_customer(self, epost):
-        for customer in self.customers:
-            if customer.epost == epost:
-                self.customers.remove(customer)
-                print(F"kunden {customer.namn} borttagen")
-            else:
-                print(f"ingen kund med epostadressen: {epost} hittad")
-
-    def find_customer():
-        pass
-
-db = CustomerDatabase()
-
-db.add_customer(Customer("Agge", "Agge@gmail.com", "0700474811", "Treklövergatan 1"))
-db.add_customer(Customer("svampbob", "bobbysvamp@gmail.com", "07845694586", "bikinibotten 1"))
-
-
-db.list_customers()
+#OOP
+# 1. Kunddatabas
