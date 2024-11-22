@@ -8,27 +8,31 @@
 # print(result2)
 
 #Upg2
-from statistik import medelvarde, median, standardavvikelse
+# from statistik import medelvarde, median, standardavvikelse
 
-tal_lista = [10, 20, 30, 40, 50]
+# tal_lista = [10, 20, 30, 40, 50]
 
-medel = medelvarde(tal_lista)
-print(medel)
+# medel = medelvarde(tal_lista)
+# print(medel)
 
-median = median(tal_lista)
-print(median)
+# median = median(tal_lista)
+# print(median)
 
-st_avv = standardavvikelse(tal_lista)
-print(st_avv)
+# st_avv = standardavvikelse(tal_lista)
+# print(st_avv)
 
 #upg3
-# from geometriska import area_r, area_c
+import geometriska
 
-# rektangel_area = area_r(10, 5)
-# print(rektangel_area)
+rektangel_area = geometriska.area_r(10, 5)
+print(rektangel_area)
 
-# cirkel_area = area_c(10)
-# print(cirkel_area)
+cirkel_area = geometriska.area_c(7)
+print(cirkel_area)
 
 #upg 4
+# from filhantering import skriv_till_fil, las_upp_fil
+
+# filnamn = "exempel.txt"
+
 
