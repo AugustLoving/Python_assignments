@@ -31,9 +31,17 @@
 # print(cirkel_area)
 
 #upg 4
-from filhantering import skriv_till_fil, las_upp_fil
+# from filhantering import skriv_till_fil, las_upp_fil
 
-filnamn = "exempel.txt"
+# filnamn = "exempel.txt"
 
-skriv_till_fil(filnamn, "Hej! Detta är en testfil.")
-print(f"Innehållet i filen: {las_upp_fil(filnamn)}")
+# skriv_till_fil(filnamn, "Hej! Detta är en testfil.")
+# print(f"Innehållet i filen: {las_upp_fil(filnamn)}")
+
+# main.py
+from anvandarinmatning import hamta_input
+
+namn = hamta_input("Vad är ditt namn? ")
+alder = hamta_input("Hur gammal är du? ")
+
+print(f"Hej {namn}, du är {alder} år gammal.")
