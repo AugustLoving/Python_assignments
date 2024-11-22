@@ -39,9 +39,10 @@
 # print(f"Innehållet i filen: {las_upp_fil(filnamn)}")
 
 # main.py
-from anvandarinmatning import hamta_input
+from anvandarinmatning import hämta_input
 
-namn = hamta_input("Vad är ditt namn? ")
-alder = hamta_input("Hur gammal är du? ")
+namn = hämta_input("Vad är ditt namn? ")
+alder = hämta_input("Hur gammal är du? ")
 
 print(f"Hej {namn}, du är {alder} år gammal.")
+
