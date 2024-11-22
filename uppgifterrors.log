@@ -1,0 +1,2 @@
+ERROR:root:Ett fel inträffade: <class 'ValueError'> - math domain error
+ERROR:root:Ett fel inträffade: <class 'ValueError'> - could not convert string to float: 'hejehj'
