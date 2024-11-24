@@ -125,3 +125,65 @@
 #     print("Ange ett tal!")
 #     traceback.print_exc()
 
+#Uppgifter 2
+#Upg 1
+
+# def kontrollera_ålder(age):
+#     if age < 0:
+#         raise ValueError ("Åldern kan inte vara negativ")
+#     else:
+#         print(f"Din ålder är {age}")
+
+# try:
+#     kontrollera_ålder(-3)
+# except ValueError as e:
+#     print(F"fel: {e}")
+
+#Upg 2
+# def kontrollera_lösenord(lösen):
+#     if len(lösen) < 8:
+#         raise ValueError ("Lösen är för kort!")
+#     elif not any(tecken.isdigit() for tecken in lösen):
+#         raise ValueError ("Lösenordet måste innehålla minst en siffra!")
+#     print("Lösenordet är godkänt!")
+    
+# try:
+#     kontrollera_lösenord("nilsebbe123")
+# except ValueError as e:
+#     print(f"Fel: {e}")
+
+#Upg 3
+# def kontrollera_lista(lista):
+#     if not all(isinstance(element, int) for element in lista):
+#         raise TypeError ("Alla element i listan ska vara heltal!")
+#     print(sum(lista))
+
+# try:
+#     kontrollera_lista([1, "två", 3])
+# except TypeError as error:
+#     print(f"Fel: {error}")
+
+#Upg 4
+# def räkna_bokstäver(sträng):
+#     if not sträng:
+#         raise ValueError ("Strängen är tom!")
+#     print(len(sträng))
+
+# try:
+#     räkna_bokstäver("")
+# except ValueError as e:
+#     print(f"fel: {e}")
+
+#Upg 5
+# class OgiltigTemperaturError(Exception):
+#     pass
+
+# def kontrollera_temperatur(temp):
+#     if temp < -273.15:
+#         raise OgiltigTemperaturError("Temperaturen kan inte vara lägre än absoluta nollpunkten!")
+#     print(f"Temperaturen är: {temp} grader")
+
+# try:
+#     kontrollera_temperatur(-300)
+# except OgiltigTemperaturError as e:
+#     print(f"fel: {e}")
