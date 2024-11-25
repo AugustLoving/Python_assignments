@@ -210,3 +210,34 @@
 
 #OOP
 # 1. Kunddatabas
+
+
+# Fakturasystem
+
+# from invoice import Invoice, InvoiceManager
+
+# def main():
+#     manager = InvoiceManager()
+
+#     try:
+#         faktura1 = Invoice(1, "Willy", 10000)
+#         faktura2 = Invoice(2, "Svampbob", 200.75)
+#         manager.skapa_faktura(faktura1)
+#         manager.skapa_faktura(faktura2)
+
+#         faktura1.update_payment_status("Paid")
+
+#         obetald = manager.lista_obetalda_fakturor()
+
+#         for faktura in obetald:
+#             print(f"Faktura {faktura.fakturanummer} for {faktura.kund} är obetald.")
+
+#     except ValueError as e:
+#         print(f"Error: {e}")
+
+#     except Exception as e:
+#         print(f"Oväntat fel: {e}")
+
+
+# if __name__ == "__main__":
+#     main()      
