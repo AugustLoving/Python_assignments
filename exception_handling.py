@@ -128,16 +128,16 @@
 #Uppgifter 2
 #Upg 1
 
-# def kontrollera_ålder(age):
-#     if age < 0:
-#         raise ValueError ("Åldern kan inte vara negativ")
-#     else:
-#         print(f"Din ålder är {age}")
+def kontrollera_ålder(age):
+    if age < 0:
+        raise ValueError ("Åldern kan inte vara negativ")
+    else:
+        print(f"Din ålder är {age}")
 
-# try:
-#     kontrollera_ålder(-3)
-# except ValueError as e:
-#     print(F"fel: {e}")
+try:
+    kontrollera_ålder(-3)
+except ValueError as e:
+    print(F"fel: {e}")
 
 #Upg 2
 # def kontrollera_lösenord(lösen):
@@ -148,7 +148,7 @@
 #     print("Lösenordet är godkänt!")
     
 # try:
-#     kontrollera_lösenord("nilsebbe123")
+#     kontrollera_lösenord("helloo")
 # except ValueError as e:
 #     print(f"Fel: {e}")
 
