@@ -21,15 +21,24 @@ class Customer:
         days_last_interaction = todays_date - self.last_interaction
         return days_last_interaction.days
 
+
+class ExistingCustomerError(Exception):
+    pass
+
+
 class CustomerDataSystem():
     def __init__(self, name):
         self.name = name
         self.customers = []
 
     def add_customer(self, name, email, phone):
+        if any(customer.email == email for customer in self.customers):
+            raise ExistingCustomerError(f"{email} already linked with existing account!")
+
         new_customer = Customer(name, email, phone)
         self.customers.append(new_customer)
         print(f"Customer: {name} added!")   
+
 
     def remove_customer(self, customer_name):
         customer_to_remove = next((c for c in self.customers if c.name == customer_name), None)
@@ -38,7 +47,7 @@ class CustomerDataSystem():
             print(f"Customer '{customer_name}' removed from the system!")
         else:
             print(f"Customer '{customer_name}' not found!")
-
+            #raise keyerror här? då behövs try där nere. bra eller dåligt?
 
     def update_customer_info(self, name, phone = None, email = None):
         customer = next((c for c in self.customers if c.name == name), None)
@@ -59,6 +68,8 @@ class CustomerDataSystem():
         for customer in self.customers:
             print(f"name: {customer.name}, email: {customer.email}, phone: {customer.phone}")
 
+
+#Användning
 crm = CustomerDataSystem("Riot Games")
 
 crm.add_customer("Boyd", "SheriffBoyd@gmail.com", 700474811)
@@ -77,8 +88,12 @@ print(f"days since last interc: {days}")
 crm.remove_customer("Sara")
 crm.get_list()
 
+try:
+    crm.add_customer("Boyd", "SheriffBoyd@gmail.com", 700474811)
+except ExistingCustomerError as error:
+    print(f"Something went wrong: {error}")
 
-    
+ 
 
     
 
