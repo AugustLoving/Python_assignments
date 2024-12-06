@@ -61,8 +61,12 @@ class CustomerDataSystem():
         else:
             print(f"Customer {name} not found")
         
-    def add_interaction(self):
-        pass
+    def add_interaction(self, customer_name, interaction):
+        customer = next((c for c in self.customers if c.name == customer_name), None)
+        if customer:
+            customer.add_interaction(interaction)
+        else:
+            print(f"Customer '{customer_name}' not found!")
 
     def get_list(self):
         for customer in self.customers:
@@ -79,11 +83,13 @@ crm.get_list()
 
 crm.update_customer_info("Boyd", phone = 793856239)
 
-customer_boyd = next(c for c in crm.customers if c.name == "Boyd")
-customer_boyd.add_interaction("Called to discuss a new deal.")
+#Från customerdatasystem'
+crm.add_interaction("Boyd", "Booked a meeting.")
 
+#snygga till, eller är detta rätt?
+customer_boyd = next(c for c in crm.customers if c.name == "Boyd")
 days = customer_boyd.calculate_days_since_last_interaction()
-print(f"days since last interc: {days}")
+print(f"days since last interaction for 'Boyd': {days}")
 
 crm.remove_customer("Sara")
 crm.get_list()
