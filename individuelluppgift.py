@@ -83,7 +83,7 @@ crm.get_list()
 
 crm.update_customer_info("Boyd", phone = 793856239)
 
-#Från customerdatasystem'
+#Från customerdatasystem. Överflödigt med add_interaction i Customer classen?
 crm.add_interaction("Boyd", "Booked a meeting.")
 
 #snygga till, eller är detta rätt?
