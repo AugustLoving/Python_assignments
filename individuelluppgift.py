@@ -20,11 +20,17 @@ class Customer:
         todays_date = datetime.datetime.today()
         days_last_interaction = todays_date - self.last_interaction
         return days_last_interaction.days
-
+# 30 dagars grejen med detta typ if days_.._.. > 30..
+    def inactiv_customer(self, days_max = 30):
+        if self.calculate_days_since_last_interaction is not None and self.calculate_days_since_last_interaction > days_max:
+            return True
+        return False
+        
 
 class ExistingCustomerError(Exception):
     pass
-
+class CustomerNotFoundError(Exception):
+    pass
 
 class CustomerDataSystem():
     def __init__(self, name):
@@ -35,24 +41,27 @@ class CustomerDataSystem():
         try:
             if any(customer.email == email for customer in self.customers):
                 raise ExistingCustomerError(f"{email} already linked with existing account!")
-
+#raise fångar
             new_customer = Customer(name, email, phone)
             self.customers.append(new_customer)
-            print(f"Customer: {name} added!")
+            print(f"Customer '{name}' added!")
         
         except ExistingCustomerError as e:
             print(f"Error: {e}")
-            
+#except kastar            
 
 
     def remove_customer(self, customer_name):
-        customer_to_remove = next((c for c in self.customers if c.name == customer_name), None)
-        if customer_to_remove:
+        try:
+            customer_to_remove = next((c for c in self.customers if c.name == customer_name), None)
+            if not customer_to_remove:
+                raise CustomerNotFoundError(f"No customer '{customer_name}' found!")
+            
             self.customers.remove(customer_to_remove)
-            print(f"Customer '{customer_name}' removed from the system!")
-        else:
-            print(f"Customer '{customer_name}' not found!")
-            #raise keyerror här? då behövs try där nere. bra eller dåligt?
+            print(f"Customer '{customer_name}' removed!")
+        
+        except CustomerNotFoundError as e:
+            print(f"Error: {e}")
 
     def update_customer_info(self, name, phone = None, email = None):
         customer = next((c for c in self.customers if c.name == name), None)
@@ -70,13 +79,54 @@ class CustomerDataSystem():
         customer = next((c for c in self.customers if c.name == customer_name), None)
         if customer:
             customer.add_interaction(interaction)
+            customer.last_interaction = datetime.datetime.now()
         else:
             print(f"Customer '{customer_name}' not found!")
+
+    def get_interaction_list_specifik(self, customer_name):
+        try:
+            customer = next((c for c in self.customers if c.name == customer_name), None)
+            if not customer:
+                raise CustomerNotFoundError(f"Customer '{customer_name}' not found")
+
+            print(f"List of interactions for {customer.name}: ")
+            for interaction in customer.interactions:
+                print(f"- {interaction}")
+            
+            return customer.interactions
+
+        except CustomerNotFoundError as e:
+            print(f"Error: {e}")
+            return []
+
+
+    def calculate_days_since_last_interaction(self, customer_name):
+        customer = next((c for c in self.customers if c.name == customer_name), None)
+        if not customer:
+            print(f"Customer: '{customer_name}' not found!")
+            return None
+
+        if not customer.last_interaction:
+            print(f"Customer '{customer_name}' has no previous interactions")
+            return None
+
+        todays_date = datetime.datetime.today()
+        days_since = (todays_date - customer.last_interaction).days
+        print(f"Days since last interaction with {customer_name}: {days_since}")
+        return days_since
+            
 
     def get_list(self):
         for customer in self.customers:
             print(f"name: {customer.name}, email: {customer.email}, phone: {customer.phone}")
 
+
+    def print_inactiv_customers(self, days_max = 30):
+        print(f"Customers inactiv for more than {days_max} days: ")
+        for customer in self.customers:
+            if customer.inactiv_customer(days_max):
+                days_since_last_interaction = customer.calculate_days_since_last_interaction()
+                print(f"Customer name: {customer.name}, last interaction: {days_since_last_interaction} days ago")
 
 #Användning
 crm = CustomerDataSystem("Riot Games")
@@ -90,11 +140,8 @@ crm.update_customer_info("Boyd", phone = 793856239)
 
 #Från customerdatasystem. Överflödigt med add_interaction i Customer classen?
 crm.add_interaction("Boyd", "Booked a meeting.")
+crm.calculate_days_since_last_interaction("Boyd")
 
-#snygga till, eller är detta rätt?
-customer_boyd = next(c for c in crm.customers if c.name == "Boyd")
-days = customer_boyd.calculate_days_since_last_interaction()
-print(f"days since last interaction for 'Boyd': {days}")
 
 crm.remove_customer("Sara")
 crm.get_list()
@@ -102,9 +149,11 @@ crm.get_list()
 crm.add_customer("Boyd", "SheriffBoyd@gmail.com", 700474811)
 
 
- 
+crm.get_interaction_list_specifik("Boyd")
+crm.add_customer("Jade", "Jade@gmail.com", 7023470287)
+crm.get_list()
 
-    
+crm.update_customer_info("Jade", email= "Jadde@ajd.com")
 
 
 
