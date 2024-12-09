@@ -32,12 +32,17 @@ class CustomerDataSystem():
         self.customers = []
 
     def add_customer(self, name, email, phone):
-        if any(customer.email == email for customer in self.customers):
-            raise ExistingCustomerError(f"{email} already linked with existing account!")
+        try:
+            if any(customer.email == email for customer in self.customers):
+                raise ExistingCustomerError(f"{email} already linked with existing account!")
 
-        new_customer = Customer(name, email, phone)
-        self.customers.append(new_customer)
-        print(f"Customer: {name} added!")   
+            new_customer = Customer(name, email, phone)
+            self.customers.append(new_customer)
+            print(f"Customer: {name} added!")
+        
+        except ExistingCustomerError as e:
+            print(f"Error: {e}")
+            
 
 
     def remove_customer(self, customer_name):
@@ -94,10 +99,8 @@ print(f"days since last interaction for 'Boyd': {days}")
 crm.remove_customer("Sara")
 crm.get_list()
 
-try:
-    crm.add_customer("Boyd", "SheriffBoyd@gmail.com", 700474811)
-except ExistingCustomerError as error:
-    print(f"Something went wrong: {error}")
+crm.add_customer("Boyd", "SheriffBoyd@gmail.com", 700474811)
+
 
  
 
