@@ -20,7 +20,7 @@ class Customer:
         todays_date = datetime.datetime.today()
         days_last_interaction = todays_date - self.last_interaction
         return days_last_interaction.days
-# 30 dagars grejen med detta typ if days_.._.. > 30..
+
     def inactiv_customer(self, days_max = 30):
         if self.calculate_days_since_last_interaction is not None and self.calculate_days_since_last_interaction > days_max:
             return True
@@ -130,9 +130,10 @@ class CustomerDataSystem():
 
 #Användning
 crm = CustomerDataSystem("Riot Games")
-
 crm.add_customer("Boyd", "SheriffBoyd@gmail.com", 700474811)
+
 crm.add_customer("Sara", "SaraPsycho@gmail.com", 700123456)
+
 
 crm.get_list()
 
