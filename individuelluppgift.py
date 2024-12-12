@@ -155,8 +155,3 @@ crm.add_customer("Jade", "Jade@gmail.com", 7023470287)
 crm.get_list()
 
 crm.update_customer_info("Jade", email= "Jadde@ajd.com")
-
-
-
-
-    
