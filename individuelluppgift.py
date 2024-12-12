@@ -22,7 +22,7 @@ class Customer:
         return days_last_interaction.days
 
     def inactiv_customer(self, days_max = 30):
-        if self.calculate_days_since_last_interaction is not None and self.calculate_days_since_last_interaction > days_max:
+        if self.calculate_days_since_last_interaction() is not None and self.calculate_days_since_last_interaction() > days_max:
             return True
         return False
         
