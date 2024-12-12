@@ -130,8 +130,8 @@ class CustomerDataSystem():
 
 #Användning
 crm = CustomerDataSystem("Riot Games")
-crm.add_customer("Boyd", "SheriffBoyd@gmail.com", 700474811)
 
+crm.add_customer("Boyd", "SheriffBoyd@gmail.com", 700474811)
 crm.add_customer("Sara", "SaraPsycho@gmail.com", 700123456)
 
 
