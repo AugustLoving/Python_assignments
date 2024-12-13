@@ -106,53 +106,70 @@ class CustomerDataSystem():
                 print(f"Customer name: {customer.name}, last interaction: {days_since_last_interaction} days ago")
 
 # Användning
-crm = CustomerDataSystem("Riot Games")
+cds = CustomerDataSystem("Riot Games")
 
 try:
-    crm.add_customer("Boyd", "SheriffBoyd@gmail.com", 700474811)
-    crm.add_customer("Sara", "SaraPsycho@gmail.com", 700123456)
+    cds.add_customer("Boyd", "SheriffBoyd@gmail.com", 700474811)
+    cds.add_customer("Sara", "SaraPsycho@gmail.com", 700123456)
 
 except ExistingCustomerError as e:
     print(e)
 
-crm.get_list()
+cds.get_list()
 
 try:
-    crm.update_customer_info("Boyd", phone=793856239)
+    cds.update_customer_info("Boyd", phone=793856239)
 except CustomerNotFoundError as e:
     print(e)
 
 try:
-    crm.add_interaction("Boyd", "Booked a meeting.")
-    crm.calculate_days_since_last_interaction("Boyd")
+    cds.update_customer_info("August", phone=7123439)
+except CustomerNotFoundError as e:
+    print(e)
+
+try:
+    cds.add_interaction("Boyd", "Booked a meeting.")
+    cds.calculate_days_since_last_interaction("Boyd")
 except (CustomerNotFoundError, ValueError) as e:
     print(e)
 
 try:
-    crm.remove_customer("Sara")
-except CustomerNotFoundError as e:
+    cds.add_interaction("Willy", "Booked a meeting.")
+    cds.calculate_days_since_last_interaction("Boyd")
+except (CustomerNotFoundError, ValueError) as e:
     print(e)
 
-crm.get_list()
 
 try:
-    crm.add_customer("Boyd", "SheriffBoyd@gmail.com", 700474811)
-except ExistingCustomerError as e:
-    print(e)
-
-try:
-    crm.get_interaction_list_specifik("Boyd")
+    cds.remove_customer("Sara")
 except CustomerNotFoundError as e:
     print(e)
 
 try:
-    crm.add_customer("Jade", "Jade@gmail.com", 7023470287)
+    cds.remove_customer("Finns ej")
+except CustomerNotFoundError as e:
+    print(e)
+
+cds.get_list()
+
+try:
+    cds.add_customer("Boyd", "SheriffBoyd@gmail.com", 700474811)
 except ExistingCustomerError as e:
     print(e)
 
-crm.get_list()
+try:
+    cds.get_interaction_list_specifik("Boyd")
+except CustomerNotFoundError as e:
+    print(e)
 
 try:
-    crm.update_customer_info("Jade", email="Jadde@ajd.com")
+    cds.add_customer("Jade", "Jade@gmail.com", 7023470287)
+except ExistingCustomerError as e:
+    print(e)
+
+cds.get_list()
+
+try:
+    cds.update_customer_info("Jade", email="Jadde@ajd.com")
 except CustomerNotFoundError as e:
     print(e)
